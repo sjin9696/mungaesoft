@@ -1,0 +1,382 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>뭉게소프트</title>
+
+<style>
+
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:'Pretendard','Segoe UI',sans-serif;
+}
+
+html{
+scroll-behavior:smooth;
+}
+
+body{
+background:#fff;
+overflow-x:hidden;
+color:#333;
+}
+
+/* 배경 */
+
+.hero{
+height:100vh;
+display:flex;
+flex-direction:column;
+justify-content:center;
+align-items:center;
+text-align:center;
+background:linear-gradient(
+180deg,
+#dff1ff 0%,
+#ffffff 100%
+);
+position:relative;
+overflow:hidden;
+}
+
+/* 떠다니는 구름 */
+
+.bg-cloud{
+position:absolute;
+font-size:80px;
+opacity:.35;
+animation:moveCloud 35s linear infinite;
+}
+
+.cloud1{
+top:10%;
+left:-100px;
+}
+
+.cloud2{
+top:30%;
+left:-300px;
+font-size:120px;
+animation-duration:50s;
+}
+
+.cloud3{
+top:70%;
+left:-200px;
+font-size:70px;
+animation-duration:40s;
+}
+
+@keyframes moveCloud{
+
+from{
+transform:translateX(0);
+}
+
+to{
+transform:translateX(1800px);
+}
+
+}
+
+/* 마스코트 */
+
+.mascot{
+
+width:280px;
+margin-bottom:30px;
+animation:float 4s ease-in-out infinite;
+
+}
+
+.mascot svg{
+width:100%;
+height:auto;
+overflow:visible;
+}
+
+.eye{
+
+transform-origin:center;
+animation:blink 6s infinite;
+
+}
+
+@keyframes blink{
+
+0%,45%,100%{
+transform:scaleY(1);
+}
+
+47%,49%{
+transform:scaleY(.15);
+}
+
+}
+
+@keyframes float{
+
+0%,100%{
+transform:translateY(0px);
+}
+
+50%{
+transform:translateY(-15px);
+}
+
+}
+
+.hero h1{
+font-size:70px;
+color:#2f4b66;
+margin-bottom:10px;
+}
+
+.hero p{
+font-size:21px;
+color:#666;
+}
+
+.btn{
+
+display:inline-block;
+margin-top:30px;
+padding:15px 35px;
+background:#61b0ff;
+color:white;
+text-decoration:none;
+border-radius:999px;
+font-weight:bold;
+transition:.3s;
+
+}
+
+.btn:hover{
+transform:translateY(-4px);
+}
+
+/* 공통 */
+
+section{
+max-width:1200px;
+margin:auto;
+padding:100px 20px;
+}
+
+.title{
+font-size:42px;
+text-align:center;
+margin-bottom:20px;
+}
+
+.desc{
+text-align:center;
+color:#666;
+max-width:700px;
+margin:auto;
+line-height:1.8;
+}
+
+.cards{
+
+margin-top:50px;
+
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
+gap:25px;
+
+}
+
+.card{
+
+padding:30px;
+border-radius:25px;
+background:white;
+box-shadow:0 10px 30px rgba(0,0,0,.08);
+
+transition:.3s;
+
+}
+
+.card:hover{
+transform:translateY(-10px);
+}
+
+.card h3{
+margin-bottom:15px;
+color:#61b0ff;
+}
+
+.card p{
+color:#666;
+margin-bottom:20px;
+}
+
+.card a{
+
+display:inline-block;
+padding:10px 20px;
+background:#61b0ff;
+color:white;
+text-decoration:none;
+border-radius:10px;
+
+}
+
+.contact{
+
+background:#f3faff;
+padding:60px;
+border-radius:30px;
+text-align:center;
+
+}
+
+footer{
+
+text-align:center;
+padding:40px;
+color:#777;
+
+}
+
+</style>
+</head>
+
+<body>
+
+<div class="hero">
+
+<div class="bg-cloud cloud1">☁️</div>
+<div class="bg-cloud cloud2">☁️</div>
+<div class="bg-cloud cloud3">☁️</div>
+
+<div class="mascot">
+
+<svg viewBox="0 0 300 220">
+
+<path
+fill="#FFFFFF"
+stroke="none"
+d="
+M80 160
+C35 160 15 135 15 105
+C15 75 35 55 60 50
+C65 20 90 5 120 8
+C145 10 165 25 175 48
+C195 20 225 15 250 28
+C278 42 290 70 285 95
+C305 105 310 150 270 160
+Z"
+/>
+
+<circle class="eye" cx="120" cy="105" r="5" fill="#333"/>
+<circle class="eye" cx="180" cy="105" r="5" fill="#333"/>
+
+<ellipse cx="93" cy="132" rx="12" ry="8" fill="#ffbfd0"/>
+<ellipse cx="207" cy="132" rx="12" ry="8" fill="#ffbfd0"/>
+
+<path
+d="M135 125 Q150 142 165 125"
+stroke="#333"
+stroke-width="3"
+fill="none"
+stroke-linecap="round"
+/>
+
+</svg>
+
+</div>
+
+<h1>뭉게소프트</h1>
+
+<p>
+☁️ 구름처럼 가볍고 편리한 소프트웨어
+</p>
+
+<a href="#programs" class="btn">
+프로그램 보기
+</a>
+
+</div>
+
+<section>
+
+<h2 class="title">뭉게소프트 소개</h2>
+
+<p class="desc">
+뭉게소프트는 실생활에 도움이 되는
+생산성 도구와 업무 자동화 프로그램을 개발합니다.
+구름처럼 가볍고 누구나 쉽게 사용할 수 있는
+소프트웨어를 만드는 것이 목표입니다.
+</p>
+
+</section>
+
+<section id="programs">
+
+<h2 class="title">
+🚀 프로그램
+</h2>
+
+<div class="cards">
+
+<div class="card">
+<h3>업무 자동화</h3>
+<p>반복 업무를 클릭 한 번으로 자동화합니다.</p>
+<a href="#">다운로드</a>
+</div>
+
+<div class="card">
+<h3>AI 도우미</h3>
+<p>GPT 기반 업무 지원 프로그램.</p>
+<a href="#">실행하기</a>
+</div>
+
+<div class="card">
+<h3>파일 정리</h3>
+<p>폴더와 문서를 자동 정리합니다.</p>
+<a href="#">다운로드</a>
+</div>
+
+</div>
+
+</section>
+
+<section>
+
+<div class="contact">
+
+<h2>📮 문의하기</h2>
+
+<br>
+
+<p>
+협업 · 개발 의뢰 · 프로그램 문의
+</p>
+
+<br>
+
+<strong>
+hello@mungaesoft.com
+</strong>
+
+</div>
+
+</section>
+
+<footer>
+
+☁️ MUNGAE SOFT
+
+<br><br>
+
+생각을 프로그램으로
+
+</footer>
+
+</body>
+</html>
