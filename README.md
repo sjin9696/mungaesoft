@@ -1,2 +1,2 @@
-# mungaesoft
+# MmungGaeSOFT
 2026.11.13 ☁️ 구름처럼 가볍고 편리한 소프트웨어
